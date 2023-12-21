@@ -14,7 +14,7 @@ class CashWithdrawal extends Component {
   }
 
   render() {
-    const {denomination} = this.props
+    const {denominationsList} = this.props
     const {balance} = this.state
     const name = 'Sarah Williams'
     const initial = name.slice(0, 1)
@@ -39,7 +39,7 @@ class CashWithdrawal extends Component {
           <p className="withdraw">Withdraw</p>
           <p className="choose-sum">CHOOSE SUM (IN RUPEES)</p>
           <ul className="denominations-list">
-            {denomination.map(eachDenomination => (
+            {denominationsList.map(eachDenomination => (
               <DenominationItem
                 key={eachDenomination.id}
                 denominationDetails={eachDenomination}
